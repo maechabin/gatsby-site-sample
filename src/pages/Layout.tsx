@@ -1,18 +1,22 @@
 import React from 'react';
 
-export function Layout(props) {
+interface LayoutProps {
+  children: JSX.Element | JSX.Element[];
+}
+
+export function Layout(props: LayoutProps): JSX.Element {
   const { children } = props;
-  const componentStyle = {
+  const componentStyle: any = {
     margin: 0,
     padding: 0,
   };
-  const headerStyle = {
+  const headerStyle: any = {
     backgroundColor: 'darkblue',
     color: '#fff',
     textAlign: 'center',
     padding: '16px',
   };
-  const footerStyle = {
+  const footerStyle: any = {
     backgroundColor: '#ccc',
     padding: '32px',
     color: '#fff',
