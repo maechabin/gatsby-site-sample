@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 
-export function Content(): JSX.Element {
+export default function Content(): JSX.Element {
   const style = {
     content: {
       textAlign: 'center',

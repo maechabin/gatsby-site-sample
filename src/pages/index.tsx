@@ -1,8 +1,8 @@
 import React from 'react';
 import {Helmet} from "react-helmet";
 import { renderPlaygroundPage } from 'graphql-playground-html';
-import { Layout } from './Layout';
-import { Content } from './Content';
+import Layout from './Layout';
+import Content from './Content';
 
 export default (): JSX.Element => {
   return (

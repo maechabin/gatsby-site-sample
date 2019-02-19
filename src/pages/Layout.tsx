@@ -4,7 +4,7 @@ interface LayoutProps {
   children: JSX.Element | JSX.Element[];
 }
 
-export function Layout(props: LayoutProps): JSX.Element {
+export default function Layout(props: LayoutProps): JSX.Element {
   const { children } = props;
   const style = {
     container: {
