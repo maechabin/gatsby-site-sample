@@ -9,7 +9,7 @@ export default ({ location }: any): JSX.Element => {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Hello {location.state.title}}</title>
+        <title>Hello {location.state.title}</title>
       </Helmet>
       <Layout>
         <Content title={location.state.title} />
