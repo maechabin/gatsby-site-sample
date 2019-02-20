@@ -5,14 +5,15 @@ import Layout from '../components/Layout';
 import Content from '../components/Content2';
 
 export default ({ location }: any): JSX.Element => {
+  const title = location.state && location.state.title ? location.state.title : '';
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Hello {location.state.title}</title>
+        <title>Hello {title}</title>
       </Helmet>
       <Layout>
-        <Content title={location.state.title} />
+        <Content title={title} />
       </Layout>
     </>
   );
