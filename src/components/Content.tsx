@@ -1,4 +1,5 @@
-import React, { useState, useContext, useEffect, useRef } from 'react';
+import * as React from 'react';
+import { Link } from 'gatsby';
 
 export default function Content(): JSX.Element {
   const style = {
@@ -6,9 +7,9 @@ export default function Content(): JSX.Element {
       textAlign: 'center',
       padding: '64px 16px',
     } as React.CSSProperties,
-  }
-  const [title, setTitle] = useState<string>('Gatsby');
-  const inputEl = useRef<HTMLInputElement>(null);
+  };
+  const [title, setTitle] = React.useState<string>('Gatsby');
+  const inputEl = React.useRef<HTMLInputElement>(null);
 
   function handleClick(): void {
     if (inputEl.current.value) {
@@ -21,6 +22,9 @@ export default function Content(): JSX.Element {
       <h1>Hello {title}!</h1>
       <input ref={inputEl} type="text" />
       <button onClick={handleClick}>Say Hello !!</button>
+      <p>
+        <Link to="/index2">index2</Link>
+      </p>
     </div>
   );
-};
+}
