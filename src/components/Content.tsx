@@ -14,13 +14,14 @@ export default function Content(): JSX.Element {
   function handleClick(): void {
     if (inputEl.current.value) {
       setTitle(inputEl.current.value);
+      inputEl.current.value = '';
     }
   }
 
   return (
     <div style={style.content}>
       <h1>Hello {title}!</h1>
-      <input ref={inputEl} type="text" />
+      <input ref={inputEl} type="text" defaultValue="" />
       <button onClick={handleClick}>Say Hello !!</button>
       <p>
         <Link to="/index2">index2</Link>
