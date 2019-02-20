@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { renderPlaygroundPage } from 'graphql-playground-html';
 import Layout from '../components/Layout';
-import Content from '../components/Content';
+import Content from '../components/Content2';
 
 export default (): JSX.Element => {
   return (
@@ -10,7 +10,6 @@ export default (): JSX.Element => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Hello Gatsby</title>
-        <script>alert('Hello Gatsby');</script>>
       </Helmet>
       <Layout>
         <Content />
