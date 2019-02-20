@@ -4,15 +4,15 @@ import { renderPlaygroundPage } from 'graphql-playground-html';
 import Layout from '../components/Layout';
 import Content from '../components/Content2';
 
-export default (): JSX.Element => {
+export default ({ location }: any): JSX.Element => {
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Hello Gatsby</title>
+        <title>Hello {location.state.title}}</title>
       </Helmet>
       <Layout>
-        <Content />
+        <Content title={location.state.title} />
       </Layout>
     </>
   );

@@ -24,7 +24,9 @@ export default function Content(): JSX.Element {
       <input ref={inputEl} type="text" defaultValue="" />
       <button onClick={handleClick}>Say Hello !!</button>
       <p>
-        <Link to="/index2">index2</Link>
+        <Link to="/index2" state={{ title }}>
+          index2
+        </Link>
       </p>
     </div>
   );
